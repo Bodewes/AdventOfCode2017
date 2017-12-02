@@ -14,7 +14,7 @@ namespace Day00
             Console.WriteLine("Day 01...");
 
             // Read Input
-            var lines = Input.readFileToList("dummyInput.txt");
+            var lines = Util.Tools.readFileToList("dummyInput.txt");
 
             // Setup
             var Solution = new Solution() { Data = lines };

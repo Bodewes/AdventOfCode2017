@@ -14,7 +14,7 @@ namespace Day01
             Console.WriteLine("Day 01...");
 
             // Read Input
-            var part1 = Input.readFileToList("part1.txt").First();
+            var part1 = Tools.readFileToList("part1.txt").First();
 
             var test1 = "1122";
             var test2 = "1111";
