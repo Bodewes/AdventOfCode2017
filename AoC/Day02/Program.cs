@@ -40,11 +40,10 @@ namespace Day02
 
             var sum = 
                 Data
-                .Select((x) => { return x.Split(new char[] { ' ','\t' }, StringSplitOptions.RemoveEmptyEntries); })
+                .ToListOfIntArray()
                 .Select(x =>
                 {
-                    var nums = x.ToList().Select(y => Convert.ToInt32(y));
-                    return nums.Max() - nums.Min();
+                    return x.Max() - x.Min();
                 }).Sum();
             Console.WriteLine(sum);
         }
