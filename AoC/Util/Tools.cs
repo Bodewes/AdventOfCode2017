@@ -40,5 +40,11 @@ namespace Util
             if (a < b) return GCD(a, b - a);
             return a;
         }
+
+        // With no shame stolen from https://stackoverflow.com/a/32778307/249845
+        static public bool isAnagram(this string a, string b)
+        {
+            return (String.Concat(a.OrderBy(c => c)).Equals(String.Concat(b.OrderBy(c => c))));
+        }
     }
 }
