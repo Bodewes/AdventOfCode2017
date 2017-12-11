@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.26228.12
+VisualStudioVersion = 15.0.27004.2005
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Util", "Util\Util.csproj", "{4EEF13F7-2ED0-442C-8728-3F38EF0B82D9}"
 EndProject
@@ -28,6 +28,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Day09", "Day09\Day09.csproj", "{A5CE9549-D377-45CB-9D17-357D1539C88A}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Day10", "Day10\Day10.csproj", "{6C753C4E-2020-47FB-8EC4-1BBC0013B5F2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Day11", "Day11\Day11.csproj", "{07857C99-5FAD-4C22-9881-8A3EBAA9AF20}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -87,6 +89,10 @@ Global
 		{6C753C4E-2020-47FB-8EC4-1BBC0013B5F2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6C753C4E-2020-47FB-8EC4-1BBC0013B5F2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6C753C4E-2020-47FB-8EC4-1BBC0013B5F2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{07857C99-5FAD-4C22-9881-8A3EBAA9AF20}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{07857C99-5FAD-4C22-9881-8A3EBAA9AF20}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{07857C99-5FAD-4C22-9881-8A3EBAA9AF20}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{07857C99-5FAD-4C22-9881-8A3EBAA9AF20}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
