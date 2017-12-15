@@ -30,17 +30,17 @@ namespace Day15
     class SolutionPart1
     {
 
-        public void Solve(int seedA, int seedB)
+        public void Solve(long seedA, long seedB)
         {
             Stopwatch sw = new Stopwatch();
             sw.Start();
 
-            int A = seedA;
-            int B = seedB;
+            long A = seedA;
+            long B = seedB;
             
-            int score =0;
+            long score =0;
 
-            for (int i =0; i< 40_000_000; i++)
+            for (long i =0; i< 40_000_000; i++)
             {
                 A = NextValueA(A);
                 B = NextValueB(B);
@@ -57,31 +57,31 @@ namespace Day15
             Console.WriteLine($"time: {sw.Elapsed}");
         }
 
-        private int NextValueA(int prev)
+        private long NextValueA(long prev)
         {
-            return (int) (( (Int64)prev * (Int64)16807) % 2147483647);
+            return prev * 16807 % 2147483647;
         }
 
-        private int NextValueB(int prev)
+        private long NextValueB(long prev)
         {
-            return (int)(((Int64)prev * (Int64)48271) % 2147483647);
+            return prev * 48271 % 2147483647;
         }
     }
 
     class SolutionPart2
     {
 
-        public void Solve(int seedA, int seedB)
+        public void Solve(long seedA, long seedB)
         {
             Stopwatch sw = new Stopwatch();
             sw.Start();
 
-            int A = seedA;
-            int B = seedB;
+            long A = seedA;
+            long B = seedB;
 
-            int score = 0;
+            long score = 0;
 
-            for (int i = 0; i < 5_000_000; i++)
+            for (long i = 0; i < 5_000_000; i++)
             {
                 A = NextValueA(A);
                 B = NextValueB(B);
@@ -99,21 +99,21 @@ namespace Day15
             Console.WriteLine($"time: {sw.Elapsed}");
         }
 
-        private int NextValueA(int prev)
+        private long NextValueA(long prev)
         {
             do
             {
-                prev = (int)(((Int64)prev * (Int64)16807) % 2147483647);
+                prev = prev * 16807 % 2147483647;
             } while ((prev & (4-1)) != 0); // prev % 4 === prev & 0b11
 
             return prev;
         }
 
-        private int NextValueB(int prev)
+        private long NextValueB(long prev)
         {
             do
             {
-                prev = (int)(((Int64)prev * (Int64)48271) % 2147483647);
+                prev = prev *48271 % 2147483647;
             } while ( (prev & (8-1)) != 0);
             return prev;
         }
