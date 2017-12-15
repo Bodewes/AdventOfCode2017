@@ -23,17 +23,17 @@ namespace Day13
             //s.SolvePart1(firewallTest);
             
 
-            var lines = File.ReadAllLines("input.txt");
+            var lines = File.ReadAllLines("inputMir.txt");
             var firewall = new Dictionary<int, int>();
             foreach (var line in lines)
             {
                 var split = line.Split(new char[] { ':' }, StringSplitOptions.RemoveEmptyEntries);
                 firewall.Add(int.Parse(split[0].Trim()), int.Parse(split[1].Trim()));
             }
-            //s.SolvePart1(firewall);
+            s.SolvePart1(firewall);
 
 
-            s.SolvePart2(firewallTest);
+            //s.SolvePart2(firewallTest);
             s.SolvePart2(firewall);
             Console.ReadKey();
         }
@@ -56,7 +56,7 @@ namespace Day13
 
                     if (i % (2 * depth - 2) == 0)
                     {
-                        Console.WriteLine($"\tCaught at {i} with depth {depth}");
+                        Console.Write($"\tCaught at {i} with depth {depth}: adding {i*depth} ");
                         severity += i * depth; 
                     }
 

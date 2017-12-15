@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{CD97F89A-516F-4CDF-8834-1DF225BF42B9}</ProjectGuid>
+    <ProjectGuid>{68BA1FFD-5CC1-43F0-A407-89E2E4ACEF8A}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>Day13</RootNamespace>
-    <AssemblyName>Day13</AssemblyName>
+    <RootNamespace>Day15</RootNamespace>
+    <AssemblyName>Day15</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -47,20 +47,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\Util\Util.csproj">
-      <Project>{4eef13f7-2ed0-442c-8728-3f38ef0b82d9}</Project>
-      <Name>Util</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="inputMir.txt">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="input.txt">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
