@@ -52,21 +52,24 @@ namespace Day24
                 pieces.Add((Math.Min(int.Parse(tokens[0]), int.Parse(tokens[1])), Math.Max(int.Parse(tokens[0]), int.Parse(tokens[1]))));
             });
 
-            var start = pieces.Where(p => p.x == 0 || p.y == 0);
-            foreach(var s in start)
-            {
-                var selectlist = pieces.ConvertAll(p => (p.x, p.y));
-                selectlist.Remove((s.x, s.y));
-                var newList = new List<(int x, int y)>();
-                if (s.x == 0)
-                    newList.Add((s.x, s.y));
-                else
-                    newList.Add((s.y, s.x));
-                Grow(newList, selectlist);
-            }
-
+            //var start = pieces.Where(p => p.x == 0 || p.y == 0);
+            //foreach(var s in start)
+            //{
+            //    var selectlist = pieces.ConvertAll(p => (p.x, p.y));
+            //    selectlist.Remove((s.x, s.y));
+            //    var newList = new List<(int x, int y)>();
+            //    if (s.x == 0)
+            //        newList.Add((s.x, s.y));
+            //    else
+            //        newList.Add((s.y, s.x));
+            //    Grow(newList, selectlist);
+            //}
+            var startList = new List<(int x, int y)>();
+            startList.Add((0, 0));
+            Grow(startList, pieces);
+            
             Console.WriteLine($"  == Max Bridge: {max} ==");
-            Console.WriteLine($"  == Longest Bridge:{longest} has strength {longest_max} ==");
+            Console.WriteLine($"  == Longest Bridge:{longest-1} has strength {longest_max} ==");
         }
 
         public void Grow(List<(int x, int y)> list, List<(int x, int y)> availablePieces)
